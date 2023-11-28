@@ -1,22 +1,23 @@
 'use client';
 import {Button} from '@/components/ui/button';
 import {Form} from '@/components/ui/form';
-import {SignInSchemaType, signInFormSchema} from '@/lib/validation/SignIn';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
-import InputField from './InputField';
+import InputField from '../SignUp/InputField';
+import {SignUpSchemaType, signUpFormSchema} from '@/lib/validation/SignUp';
 
-export default function SignIn() {
+export default function SignUp() {
   // Form Object
-  const form = useForm<SignInSchemaType>({
-    resolver: zodResolver(signInFormSchema),
+  const form = useForm<SignUpSchemaType>({
+    resolver: zodResolver(signUpFormSchema),
     defaultValues: {
       email: '',
       password: '',
+      registration: '',
     },
   });
 
-  function onSubmit(values: SignInSchemaType) {
+  function onSubmit(values: SignUpSchemaType) {
     // Form values are accessible here.
     // ✅ This will be type-safe and validated.
     console.log(values);
@@ -40,6 +41,14 @@ export default function SignIn() {
             label="Password"
             description="Password"
             placeholder="Enter your password"
+          />
+          <InputField
+            formControl={form.control}
+            name="registration"
+            type="text"
+            label="Registration"
+            description="Registration"
+            placeholder="Enter your SUST registration number"
           />
           <Button type="submit" className="max-w-max">
             Submit
