@@ -1,6 +1,6 @@
 import {z} from 'zod';
 
-export const formSchema = z.object({
+export const signInFormSchema = z.object({
   email: z.string().min(1, {
     message: 'Email must not be empty',
   }),
@@ -9,4 +9,4 @@ export const formSchema = z.object({
   }),
 });
 
-export type SignInSchemaType = z.infer<typeof formSchema>;
+export type SignInSchemaType = z.infer<typeof signInFormSchema>;
