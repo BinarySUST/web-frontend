@@ -36,19 +36,19 @@ export default function SignUp() {
           />
           <InputField
             formControl={form.control}
-            name="password"
-            type="password"
-            label="Password"
-            description="Password"
-            placeholder="Enter your password"
-          />
-          <InputField
-            formControl={form.control}
             name="registration"
             type="text"
             label="Registration"
             description="Registration"
             placeholder="Enter your SUST registration number"
+          />
+          <InputField
+            formControl={form.control}
+            name="password"
+            type="password"
+            label="Password"
+            description="Password"
+            placeholder="Enter your password"
           />
           <Button type="submit" className="max-w-max">
             Submit
