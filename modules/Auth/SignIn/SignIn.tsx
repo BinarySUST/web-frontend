@@ -1,10 +1,7 @@
 'use client';
 import {Button} from '@/components/ui/button';
 import {Form} from '@/components/ui/form';
-import {
-  SignInSchemaType,
-  signInFormSchema,
-} from '@/modules/Auth/SignIn/validation/SignIn';
+import {SignInSchemaType, signInFormSchema} from './validation/SignIn';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
 import InputField from './InputField';
