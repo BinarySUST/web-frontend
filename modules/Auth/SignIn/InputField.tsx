@@ -7,7 +7,7 @@ import {
   FormField,
 } from '@/components/ui/form';
 import {Input} from '@/components/ui/input';
-import {SignInSchemaType} from '@/modules/Auth/SignIn/validation/SignIn';
+import {SignInSchemaType} from './validation/SignIn';
 import {Control} from 'react-hook-form';
 
 type Props = {
