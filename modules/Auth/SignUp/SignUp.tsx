@@ -4,7 +4,7 @@ import {Form} from '@/components/ui/form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
 import InputField from '../SignUp/InputField';
-import {SignUpSchemaType, signUpFormSchema} from '@/lib/validation/SignUp';
+import {SignUpSchemaType, signUpFormSchema} from './validation/SignUp';
 
 export default function SignUp() {
   // Form Object
