@@ -8,6 +8,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from './ui/navigation-menu';
+import {ThemeToggle} from './theme-toggle';
 
 export default function Header() {
   return (
@@ -19,6 +20,9 @@ export default function Header() {
       </div>
       <NavigationMenu>
         <NavigationMenuList>
+          <NavigationMenuItem>
+            <ThemeToggle />
+          </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/login" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
